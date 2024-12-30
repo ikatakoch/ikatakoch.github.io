@@ -1,0 +1,36 @@
+header {
+  background-size:cover;
+    width:1450px;
+    height:150px;
+  padding: 15px 0;
+  background-image:url(header.png);
+  background-repeat: no-repeat;
+  color: white;
+
+}
+header .headline{
+    line-height: 100px;
+    float: left;
+    font-size: 30px;
+    margin-left: 100px;
+}
+.nav-list {
+    line-height: 100px;
+    float: left;
+    margin-left: 30px;
+    list-style: none;
+}
+.nav-list-item {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+body {
+  font-family:'メイリオ', 'Meiryo', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3','Segoe UI'
+}
+* {
+  margin:0; padding:0;
+}
+.center {
+  text-align: center;
+}
