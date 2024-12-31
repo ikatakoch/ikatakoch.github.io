@@ -1,41 +1,19 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>いかたこチャンネル</title>
-    <link rel="stylesheet" href="ikatakoch.css">
+    <title></title>
   </head>
   <body>
-    <header>
-   <h1 class="headline">
-     <a>　　　　　　</a>
-   </h1>
-   <br><br><br>
-   <ul class="nav-list">
-     <li class="nav-list-item">
-       <a href="#">ホーム</a>
-     </li>
-    <li class="nav-list-item">
-       <a href="#">閉鎖中</a>
-     </li>
-     <li class="nav-list-item">
-       <a href="#">閉鎖中</a>
-     </li>
-     <li class="nav-list-item">
-       <p>　　　　</p>
-     </li>
-   </ul>
- </header>
-<div class="gcse-search"></div>
- <br>
- <div class="center">
-   <a href="https://youtube.com/@いかたこチャンネル-a"><img src="Youtube.jpg" alt="YOUTUBE" height="50px"></a>
-   <a href="https://x.com/ikatakoch_x"><img src="X.jpg" alt="X" height="50px"></a>
-<h1>お知らせ</h1>
-<br>
-<a href="notice1.html">2024/12/30 新ホームページ開設！</a>
- </div>
- <script async src="https://cse.google.com/cse.js?cx=00f05de39e88e4dda">
-</script>
+  <h1>うるさいスイッチ</h1>
+  <button type="button" name="button" id="myButton">鳴らす</button>
+    <script type="text/javascript">
+      const myButton = document.getElementById('myButton'); // ボタンのIDを指定
+const myAudio = new Audio('silent.mp3'); // 音源ファイルのパスを指定
+
+myButton.addEventListener('click', () => {
+  myAudio.play();
+});
+    </script>
   </body>
 </html>
