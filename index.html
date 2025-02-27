@@ -1,41 +1,160 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>いかたこチャンネル</title>
-    <link rel="stylesheet" href="ikatakoch.css">
-  </head>
-  <body>
-    <header>
-   <h1 class="headline">
-     <a>　　　　　　</a>
-   </h1>
-   <br><br><br>
-   <ul class="nav-list">
-     <li class="nav-list-item">
-       <a href="#">ホーム</a>
-     </li>
-    <li class="nav-list-item">
-       <a href="#">閉鎖中</a>
-     </li>
-     <li class="nav-list-item">
-       <a href="#">閉鎖中</a>
-     </li>
-     <li class="nav-list-item">
-       <p>　　　　</p>
-     </li>
-   </ul>
- </header>
-<div class="gcse-search"></div>
- <br>
- <div class="center">
-   <a href="https://youtube.com/@いかたこチャンネル-a"><img src="Youtube.jpg" alt="YOUTUBE" height="50px"></a>
-   <a href="https://x.com/ikatakoch_x"><img src="X.jpg" alt="X" height="50px"></a>
-<h1>お知らせ</h1>
-<br>
-<a href="notice1.html">2024/12/30 新ホームページ開設！</a>
- </div>
- <script async src="https://cse.google.com/cse.js?cx=00f05de39e88e4dda">
-</script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Todoリスト</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <h1>Todoリスト</h1>
+  <input type="button" name="" value="+" onclick="plus()"><input type="button" name="" value="-" onclick="minus()">  <input type="button" name="" value="dl" onclick="download()">
+  <form name="myform">
+  <span>load</span><input type="file" name="myfile" value="lo">
+    </form>
+    <table border="1">
+      <tr>
+        <th>No</th>
+        <th>✔︎</th>
+        <th>予定</th>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td><input type="checkbox" name="" value="" ></td>
+        <td><span id="output0"></span></td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td><input type="checkbox" name="" value="" ></td>
+        <td><span id="output1"></span></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><input type="checkbox" name="" value=""></td>
+        <td><span id="output2"></span></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><input type="checkbox" name="" value=""></td>
+        <td><span id="output3"></span></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><input type="checkbox" name="" value="" ></td>
+        <td><span id="output4"></span></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><input type="checkbox" name="" value="" ></td>
+        <td><span id="output5"></span></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><input type="checkbox" name="" value=""></td>
+        <td><span id="output6"></span></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><input type="checkbox" name="" value="" ></td>
+        <td><span id="output7"></span></td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><input type="checkbox" name="" value="" ></td>
+        <td><span id="output8"></span></td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td><input type="checkbox" name="" value=""></td>
+        <td><span id="output9"></span></td>
+      </tr>
+    </table>
+  <script type="text/javascript">
+    function plus() {
+    let inputText = "文字";
+    let outputNumber = null
+      for (let i = 0;i < 10; i++) {
+        inputText = document.getElementById('output' + i);
+        if (inputText.textContent === "") {
+          outputNumber = i
+          break;
+        }
+      }
+      if (outputNumber !== null) {
+    const text = prompt("Todoを追加");
+    if (text !== null) {
+      let apple = document.getElementById('output' + outputNumber);
+      apple.textContent = text;
+    }
+  } else {
+    alert("空のTodo欄がありません。-を押して減らしてください");
+  }
+    }
+    function minus() {
+      let inputText = "文字";
+      let outputNumber = null
+      for (let i = 0;i < 10; i++) {
+        outputText = document.getElementById('output' + i);
+        if (outputText.textContent !== "") {
+          outputNumber = i
+          break;
+        }
+      }
+      if (outputNumber !== null) {
+    const text = prompt("何番目のTodoを削除しますか？(空白の場合上から削除されます。)");
+    if (text !== "") {
+      let apple = document.getElementById('output' + text);
+      apple.textContent = "";
+    } else {
+      let apple = document.getElementById('output' + outputNumber);
+      apple.textContent = "";
+    }
+  } else {
+    alert("削除するTodoがありません。");
+  }
+    }
+    function download() {
+      var a0 = document.getElementById('output0');
+      var a1 = document.getElementById('output1');
+      var a2 = document.getElementById('output2');
+      var a3 = document.getElementById('output3');
+      var a4 = document.getElementById('output4');
+      var a5 = document.getElementById('output5');
+      var a6 = document.getElementById('output6');
+      var a7 = document.getElementById('output7');
+      var a8 = document.getElementById('output8');
+      var a9 = document.getElementById('output9');
+      var b0 = a0.textContent
+      var b1 = a1.textContent
+      var b2 = a2.textContent
+      var b3 = a3.textContent
+      var b4 = a4.textContent
+      var b5 = a5.textContent
+      var b6 = a6.textContent
+      var b7 = a7.textContent
+      var b8 = a8.textContent
+      var b9 = a9.textContent
+      const all = b0 + "," + b1 + "," +  b2 + "," +  b3 + "," +  b4 + "," +  b5 + "," +  b6 + "," +  b7 + "," +  b8 + "," +  b9
+      const blob = new Blob([all],{type:"text/plain"});
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'todo.txt';
+      link.click();
+    }
+
+      var form = document.forms.myform;
+      form.myfile.addEventListener( 'change', function(e) {
+          var result = e.target.files[0];
+          var reader = new FileReader();
+          reader.readAsText( result );
+          reader.addEventListener( 'load', function() {
+          var load = reader.result.split(',');
+          console.log(load)
+          for (let i = 0; i < 10; i++) {
+            let grape = document.getElementById('output' + i);
+            grape.textContent = load[i];
+          }
+    })
+  })
+    </script>
+</body>
 </html>
